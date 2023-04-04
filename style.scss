@@ -39,160 +39,182 @@ $bluegray:hsl(210, 4%, 67%);
 body{
     margin: auto 0;
     .Links_NavBar, .Info_Desktop{
-        display: none;//Masque les photos pour la version pc
+    display: none;//Masque les photos pour la version pc
+    }
+    header{
+        background-image: url(./assets/img/mobile/image-header.jpg);
+        background-repeat: none;
+        background-size: cover;
+        height: 550px;
+        .logo_navbar{
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 1rem 0 1rem;
         }
-        header{
-            background-image: url(./assets/img/mobile/image-header.jpg);
-            background-repeat: none;
-            background-size: cover;
-            .logo_navbar{
-                display: flex;
-                justify-content: space-between;
-                padding: 2rem 1rem 0 1rem;
-            }
-            .Princ_Title{
-                display: flex;
-                flex-direction: column;
-                margin: 2rem 1rem 2rem 1rem;
-                h1{
-                    @include title;
-                    color: hsl(0, 0%, 100%);
-                    margin-bottom: 1rem;
-                    font-size: 30px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5rem;
-                }
-                .arrow{
-                    img{
-                        align-self: center;
-                        margin-top: 2rem;
-                        margin-bottom: 10rem;
-                    }
-                }
-            }
-        }
-        .Info_Mobile{
-            max-width: 375px;
+        .Princ_Title{
             display: grid;
-            background-color: $back;
-            transform: translateY(-2rem);
-            h2, p{
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-            .Services, .Collab{
-                height: 10rem;
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-                h2{
-                    @include title;
-                    margin-bottom: 1rem;
-                }
-                p{
-                    @include text; 
-                    color: $bluegray;
-                    font-weight: 700;
-                }
-                max-width: 375px;
-                a{
-                    @include links;
-                    
-                }
-            }
-            img{
-                max-width: 375px;
-            }
-            .Graphic_Design{
-                height: 600px;
-                h2, p{
-                    transform: translateY(-11rem);
-                    @include text();
-                    color: $graphicTxt;
-                    font-weight: 700;
-                }
-                h2{
-                    @include title();
-                    color: $graphicTxt;
-                    font-size: 22px;
-                    margin-bottom: 2rem;
-                }
-            }
-            
-            .Photography{
-                height: 600px;
-                h2, p{
-                    transform: translateY(-10rem);
-                    @include text();
-                    font-weight: 700;
-                }
-                h2{
-                    @include title();
-                    font-size: 22px;
-                    margin-bottom: 2rem;
-                }
-                p{
-                    color: $colorTxt;
-                }
-            }
-        }
-        .Employe{
-            display: grid;
-            grid-row: 1fr 1fr 1fr;
-            margin: 0 2rem 5rem 2rem;
-            row-gap: 4rem;
-            h3{
+            place-content: center;//Permet de centrer les éléments dans le container
+            margin: 6rem 1rem 2rem 1rem;
+
+            h1{
+                @include title;
+                color: hsl(0, 0%, 100%);
+                margin-bottom: 2rem;
+                font-size: 30px;
                 text-transform: uppercase;
-                color:$bluegray;
-                font-weight: 900;
-                font-family:Fraunces ;
-                letter-spacing: 0.3rem;
-                font-size: 14px;
-                margin: 4rem 0 4rem 0;
-                text-align: center;
+                letter-spacing: 0.5rem;
             }
+            .arrow{
+                justify-self: center;
+                img{
+                    margin-top: 2rem;
+                    //margin-bottom: 10rem;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    .Info_Mobile{
+        max-width: 375px;
+        display: grid;
+        background-color: $back;
+        transform: translateY(-2rem);
+        h2, p{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .Services, .Collab{
+            height: 15rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            h2{
+                @include title;
+                margin-bottom: 1rem;
+            }
+            p{
+                @include text; 
+                color: $bluegray;
+                font-weight: 700;
+            }
+            max-width: 375px;
+            a{
+                @include links;
+                
+            }
+        }
+        img{
+            max-width: 375px;
+        }
+        .Graphic_Design{
+            height: 600px;
+            h2, p{
+                transform: translateY(-11rem);
+                @include text();
+                color: $graphicTxt;
+                font-weight: 700;
+            }
+            h2{
+                @include title();
+                color: $graphicTxt;
+                font-size: 22px;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .Photography{
+            height: 600px;
+            h2, p{
+                transform: translateY(-10rem);
+                @include text();
+                font-weight: 700;
+            }
+            h2{
+                @include title();
+                font-size: 22px;
+                margin-bottom: 2rem;
+            }
+            p{
+                color: $colorTxt;
+            }
+        }
+    }
+    .Employe{
+        display: grid;
+        grid-row: 1fr 1fr 1fr;
+        margin: 0 2rem 5rem 2rem;
+        row-gap: 4rem;
+        h3{
+            text-transform: uppercase;
+            color:$bluegray;
+            font-weight: 900;
+            font-family:Fraunces ;
+            letter-spacing: 0.3rem;
+            font-size: 14px;
+            margin: 4rem 0 4rem 0;
+            text-align: center;
+        }
+        .director{
             img{
                 border-radius: 100%;
                 width: 60px;
                 margin-bottom: 1rem;
-            }
-            .talk{
-                @include text();
-                margin-bottom: 2rem;
-                color: hsl(213, 9%, 39%);
-            }
-            .PersName{
-                @include title;
-                padding-bottom: 0.5rem; 
-            }
-            .Job{
-                @include text();
-                color: $bluegray;
-                font-size: 12px;
+                align-self: center;
             }
         }
-        .Mix_img{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            img{
-                max-width: 100%;
-            }
-            .first_img{
-                grid-column: 1;
-                grid-row: 1;
-            }
-            .sec_img{
-                grid-column: 2;
-                grid-row: 1;
-            }
-            .third_img{
-                grid-column: 1;
-                grid-row: 2;
-            }
-            .fth_img{
-                grid-column: 2;
-                grid-row: 2;
-            }
+        .talk{
+            @include text();
+            margin-bottom: 2rem;
+            color: hsl(213, 9%, 39%);
         }
+        .PersName{
+            @include title;
+            padding-bottom: 0.5rem; 
+        }
+        .Job{
+            @include text();
+            color: $bluegray;
+            font-size: 12px;
+        }
+    }
+    .Mix_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        img{
+            width: 100%;
+            height: 100%;//remplissage complet des cellules par les images
+        }
+        .first_img{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .sec_img{
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .third_img{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .fth_img{
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+    footer{
+        background-color:#90D4C6 ;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+        .Logo_Foot{
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+        .Nav_Footer{
+            flex-direction: row;
+        }
+
+    }
 }
 

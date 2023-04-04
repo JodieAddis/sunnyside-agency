@@ -16,6 +16,7 @@ body header {
   background-image: url(./assets/img/mobile/image-header.jpg);
   background-repeat: none;
   background-size: cover;
+  height: 550px;
 }
 body header .logo_navbar {
   display: flex;
@@ -23,9 +24,9 @@ body header .logo_navbar {
   padding: 2rem 1rem 0 1rem;
 }
 body header .Princ_Title {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 1rem 2rem 1rem;
+  display: grid;
+  place-content: center;
+  margin: 6rem 1rem 2rem 1rem;
 }
 body header .Princ_Title h1 {
   font-family: Fraunces;
@@ -33,15 +34,17 @@ body header .Princ_Title h1 {
   text-align: center;
   color: hsl(198, 62%, 26%);
   color: hsl(0, 0%, 100%);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
+body header .Princ_Title .arrow {
+  justify-self: center;
+}
 body header .Princ_Title .arrow img {
-  align-self: center;
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  align-self: center;
 }
 body .Info_Mobile {
   max-width: 375px;
@@ -54,7 +57,7 @@ body .Info_Mobile h2, body .Info_Mobile p {
   padding-right: 2rem;
 }
 body .Info_Mobile .Services, body .Info_Mobile .Collab {
-  height: 10rem;
+  height: 15rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   max-width: 375px;
@@ -144,10 +147,11 @@ body .Employe h3 {
   margin: 4rem 0 4rem 0;
   text-align: center;
 }
-body .Employe img {
+body .Employe .director img {
   border-radius: 100%;
   width: 60px;
   margin-bottom: 1rem;
+  align-self: center;
 }
 body .Employe .talk {
   font-family: Barlow;
@@ -178,7 +182,8 @@ body .Mix_img {
   grid-template-rows: 1fr 1fr;
 }
 body .Mix_img img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 body .Mix_img .first_img {
   grid-column: 1;
@@ -195,4 +200,18 @@ body .Mix_img .third_img {
 body .Mix_img .fth_img {
   grid-column: 2;
   grid-row: 2;
+}
+body footer {
+  background-color: #90D4C6;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+body footer .Logo_Foot {
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+body footer .Nav_Footer {
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */
