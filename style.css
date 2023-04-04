@@ -1,0 +1,198 @@
+@font-face {
+  font-family: Barlow;
+  src: url(./assets/font/Barlow/Barlow-Regular.ttf);
+}
+@font-face {
+  font-family: Fraunces;
+  src: url(./assets/font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+body {
+  margin: auto 0;
+}
+body .Links_NavBar, body .Info_Desktop {
+  display: none;
+}
+body header {
+  background-image: url(./assets/img/mobile/image-header.jpg);
+  background-repeat: none;
+  background-size: cover;
+}
+body header .logo_navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem 0 1rem;
+}
+body header .Princ_Title {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem 2rem 1rem;
+}
+body header .Princ_Title h1 {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+body header .Princ_Title .arrow img {
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+body .Info_Mobile {
+  max-width: 375px;
+  display: grid;
+  background-color: hsl(0, 0%, 100%);
+  transform: translateY(-2rem);
+}
+body .Info_Mobile h2, body .Info_Mobile p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+body .Info_Mobile .Services, body .Info_Mobile .Collab {
+  height: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: 375px;
+}
+body .Info_Mobile .Services h2, body .Info_Mobile .Collab h2 {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  margin-bottom: 1rem;
+}
+body .Info_Mobile .Services p, body .Info_Mobile .Collab p {
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsl(210, 4%, 67%);
+  font-weight: 700;
+}
+body .Info_Mobile .Services a, body .Info_Mobile .Collab a {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  text-decoration: none;
+  font-family: Fraunces;
+}
+body .Info_Mobile img {
+  max-width: 375px;
+}
+body .Info_Mobile .Graphic_Design {
+  height: 600px;
+}
+body .Info_Mobile .Graphic_Design h2, body .Info_Mobile .Graphic_Design p {
+  transform: translateY(-11rem);
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsl(167, 40%, 24%);
+  font-weight: 700;
+}
+body .Info_Mobile .Graphic_Design h2 {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  color: hsl(167, 40%, 24%);
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+body .Info_Mobile .Photography {
+  height: 600px;
+}
+body .Info_Mobile .Photography h2, body .Info_Mobile .Photography p {
+  transform: translateY(-10rem);
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+body .Info_Mobile .Photography h2 {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+body .Info_Mobile .Photography p {
+  color: hsl(198, 62%, 26%);
+}
+body .Employe {
+  display: grid;
+  grid-row: 1fr 1fr 1fr;
+  margin: 0 2rem 5rem 2rem;
+  row-gap: 4rem;
+}
+body .Employe h3 {
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  font-weight: 900;
+  font-family: Fraunces;
+  letter-spacing: 0.3rem;
+  font-size: 14px;
+  margin: 4rem 0 4rem 0;
+  text-align: center;
+}
+body .Employe img {
+  border-radius: 100%;
+  width: 60px;
+  margin-bottom: 1rem;
+}
+body .Employe .talk {
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: hsl(213, 9%, 39%);
+}
+body .Employe .PersName {
+  font-family: Fraunces;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+  padding-bottom: 0.5rem;
+}
+body .Employe .Job {
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsl(210, 4%, 67%);
+  font-size: 12px;
+}
+body .Mix_img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+body .Mix_img img {
+  max-width: 100%;
+}
+body .Mix_img .first_img {
+  grid-column: 1;
+  grid-row: 1;
+}
+body .Mix_img .sec_img {
+  grid-column: 2;
+  grid-row: 1;
+}
+body .Mix_img .third_img {
+  grid-column: 1;
+  grid-row: 2;
+}
+body .Mix_img .fth_img {
+  grid-column: 2;
+  grid-row: 2;
+}/*# sourceMappingURL=style.css.map */
