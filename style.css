@@ -240,4 +240,194 @@ body footer .social_network {
 body footer .social_network img {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  body .Links_NavBar, body .Info_Desktop {
+    display: block;
+  }
+  body .Icon_Hamburger, body .Info_Mobile {
+    display: none;
+  }
+  body header {
+    background-image: url(./assets/img/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+  }
+  body header .Links {
+    display: block;
+    display: inline-flex;
+  }
+  body header .Links li {
+    list-style-type: none;
+  }
+  body header .Links li a {
+    font-family: Barlow;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 0 2rem 0 2rem;
+  }
+  body header .Links li .contact {
+    background-color: hsl(0, 0%, 100%);
+    color: #000000;
+    text-transform: uppercase;
+    font-family: Fraunces;
+    border-radius: 30px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  body .Info_Desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 600px);
+  }
+  body .Info_Desktop h2, body .Info_Desktop p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  body .Info_Desktop img {
+    width: 100%;
+    height: 100%;
+  }
+  body .Info_Desktop .Services, body .Info_Desktop .Collab {
+    max-width: 400px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    place-content: center;
+  }
+  body .Info_Desktop .Services h2, body .Info_Desktop .Collab h2 {
+    font-family: Fraunces;
+    font-weight: 900;
+    text-align: center;
+    color: hsl(198, 62%, 26%);
+    margin-bottom: 1rem;
+    font-size: 24px;
+  }
+  body .Info_Desktop .Services p, body .Info_Desktop .Collab p {
+    font-family: Barlow;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: hsl(210, 4%, 67%);
+    font-weight: 700;
+    font-size: 18px;
+  }
+  body .Info_Desktop .Services a, body .Info_Desktop .Collab a {
+    font-family: Fraunces;
+    font-weight: 900;
+    text-align: center;
+    color: hsl(198, 62%, 26%);
+    text-decoration: none;
+    font-family: Fraunces;
+    margin-top: 3rem;
+  }
+  body .Info_Desktop .Services {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body .Info_Desktop .egg_pic {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  body .Info_Desktop .glass_pic {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  body .Info_Desktop .Collab {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  body .Info_Desktop .Graphic_Design {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  body .Info_Desktop .Photography {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  body .Info_Desktop .Photography h2, body .Info_Desktop .Photography p, body .Info_Desktop .Graphic_Design h2, body .Info_Desktop .Graphic_Design p {
+    transform: translateY(-12rem);
+    font-family: Barlow;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+  body .Info_Desktop .Photography h2, body .Info_Desktop .Graphic_Design h2 {
+    font-family: Fraunces;
+    font-weight: 900;
+    text-align: center;
+    color: hsl(198, 62%, 26%);
+    font-size: 22px;
+    margin-bottom: 2rem;
+  }
+  body .Info_Desktop .Photography p, body .Info_Desktop .Graphic_Design p {
+    color: hsl(198, 62%, 26%);
+  }
+  body .Employe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr;
+  }
+  body .Employe .Client {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    padding-top: 4rem;
+  }
+  body .Employe img {
+    margin-left: 7rem;
+  }
+  body .Employe .talk {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  body .Employe .director {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  body .Employe .ChiefOfficer {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  body .Employe .owner {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  body .Mix_img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  body .Mix_img img {
+    width: 100%;
+    height: 100%;
+  }
+  body .Mix_img .first_img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body .Mix_img .sec_img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  body .Mix_img .third_img {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  body .Mix_img .fth_img {
+    grid-column: 4;
+    grid-row: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -21,20 +21,17 @@ $bluegray:hsl(210, 4%, 67%);
     text-align: center;
     color: $colorTxt;
 }
-
 @mixin text{
     font-family: Barlow;
     text-align: center;
     font-size: 14px;
     line-height: 1.5 ;
 }
-
 @mixin links{
     @include title;
     text-decoration: none;
     font-family: Fraunces;
 }
-
 
 //Mobile First
 body{
@@ -241,5 +238,177 @@ body{
 
 //Version pc (1440px)
 @media screen and (min-width:1440px) {
-    
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        .Links_NavBar, .Info_Desktop{
+            display: block;//Affichage des contenus pc
+            }
+        .Icon_Hamburger, .Info_Mobile{
+            display: none;
+        }
+        header{
+            background-image: url(./assets/img/desktop/image-header.jpg);
+            background-size: cover;
+            background-position: center center;
+            height: 100%;
+            .Links{
+                display: block;
+                display: inline-flex;//Alignement sur une même ligne
+                li{
+                    list-style-type: none;//Suppression des puces de la liste
+                    a{
+                        @include text();
+                        text-decoration: none;
+                        color: $back;
+                        font-weight: 700 ;
+                        padding: 0 2rem 0 2rem;
+                    } 
+                    .contact{
+                        background-color: $back;
+                        color: #000000;
+                        text-transform: uppercase;
+                        font-family: Fraunces;
+                        border-radius: 30px;
+                        padding-top: 0.8rem;
+                        padding-bottom: 0.8rem;
+                    }
+                }
+            }
+        }
+        .Info_Desktop{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 600px);
+            h2, p{
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .Services, .Collab{
+                max-width: 400px;
+                //height: 13rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                display: grid;
+                place-content: center;
+                h2{
+                    @include title;
+                    margin-bottom: 1rem;
+                    font-size: 24px;
+                }
+                p{
+                    @include text(); 
+                    color: $bluegray;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                a{
+                    @include links;
+                    margin-top: 3rem;
+                }
+            }
+            //Placement des div dans les cellules
+            .Services{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .egg_pic{
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .glass_pic{
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .Collab{
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .Graphic_Design{
+                grid-column: 1;
+                grid-row: 3;
+            }
+            .Photography{
+                grid-column: 2;
+                grid-row: 3;
+            }
+            .Photography, .Graphic_Design{
+                h2, p{
+                    transform: translateY(-12rem);
+                    @include text();
+                    font-weight: 700;
+                    padding-left: 13rem;
+                    padding-right: 13rem;
+                }
+                h2{
+                    @include title();
+                    font-size: 22px;
+                    margin-bottom: 2rem;
+                }
+                p{
+                    color: $colorTxt;
+                }
+            }
+        }
+        .Employe {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr, 1fr;
+            .Client{
+                grid-row: 1;
+                grid-column: 2;
+                align-self: center;
+                padding-top: 4rem;
+            }
+            img{
+                margin-left: 7rem;
+            }
+            .talk{
+                padding-right: 5rem;
+                padding-left: 5rem;
+            }
+            .director{
+                grid-column: 1;
+                grid-row: 2 ;
+            }
+            .ChiefOfficer{
+                grid-column: 2;
+                grid-row: 2 ;
+            }
+            .owner{
+                grid-column: 3;
+                grid-row: 2;
+            }
+        }
+        .Mix_img{
+            grid-template-columns: repeat(4, 1fr);//Alignement sur une ligne
+            grid-template-rows: 1fr;
+            img{
+                width: 100%;
+                height: 100%;//remplissage complet des cellules par les images
+            }
+            .first_img{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .sec_img{
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .third_img{
+                grid-column: 3;
+                grid-row: 1;
+            }
+            .fth_img{
+                grid-column: 4;
+                grid-row: 1;
+            }
+        }
+    }
 }
