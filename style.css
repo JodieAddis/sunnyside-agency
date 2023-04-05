@@ -285,6 +285,11 @@ body footer .social_network img {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
   }
+  body header .Links li .contact:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(198, 86%, 68%);
+    color: hsl(0, 0%, 100%);
+  }
   body .Info_Desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -299,7 +304,7 @@ body footer .social_network img {
     height: 100%;
   }
   body .Info_Desktop .Services, body .Info_Desktop .Collab {
-    max-width: 400px;
+    max-width: 600px;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: grid;
@@ -308,19 +313,22 @@ body footer .social_network img {
   body .Info_Desktop .Services h2, body .Info_Desktop .Collab h2 {
     font-family: Fraunces;
     font-weight: 900;
-    text-align: center;
+    text-align: left;
     color: hsl(198, 62%, 26%);
-    margin-bottom: 1rem;
-    font-size: 24px;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    font-size: 34px;
+    width: 380px;
   }
   body .Info_Desktop .Services p, body .Info_Desktop .Collab p {
     font-family: Barlow;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     line-height: 1.5;
     color: hsl(210, 4%, 67%);
     font-weight: 700;
     font-size: 18px;
+    margin-left: 4rem;
   }
   body .Info_Desktop .Services a, body .Info_Desktop .Collab a {
     font-family: Fraunces;
@@ -329,11 +337,17 @@ body footer .social_network img {
     color: hsl(198, 62%, 26%);
     text-decoration: none;
     font-family: Fraunces;
+    font-size: 18px;
     margin-top: 3rem;
+    width: 150px;
+    margin-left: 5.5rem;
   }
   body .Info_Desktop .Services {
     grid-column: 1;
     grid-row: 1;
+  }
+  body .Info_Desktop .Services .service_link:hover {
+    border-bottom: hsla(51, 100%, 49%, 0.5) solid 5px;
   }
   body .Info_Desktop .egg_pic {
     grid-column: 2;
@@ -346,6 +360,9 @@ body footer .social_network img {
   body .Info_Desktop .Collab {
     grid-column: 2;
     grid-row: 2;
+  }
+  body .Info_Desktop .Collab .collab_link:hover {
+    border-bottom: hsla(7, 99%, 70%, 0.5) solid 5px;
   }
   body .Info_Desktop .Graphic_Design {
     grid-column: 1;
@@ -388,7 +405,7 @@ body footer .social_network img {
     padding-top: 4rem;
   }
   body .Employe img {
-    margin-left: 7rem;
+    margin-left: 12rem;
   }
   body .Employe .talk {
     padding-right: 5rem;
@@ -429,5 +446,24 @@ body footer .social_network img {
   body .Mix_img .fth_img {
     grid-column: 4;
     grid-row: 1;
+  }
+  footer {
+    background-color: #90D4C6;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+  }
+  footer .Logo_Foot {
+    margin-bottom: 4rem;
+    filter: invert(26%) sepia(9%) saturate(2406%) hue-rotate(116deg) brightness(50%) contrast(90%);
+  }
+  footer .Nav_Footer a:hover {
+    color: hsl(0, 0%, 100%);
+  }
+  footer .social_network img:hover {
+    filter: brightness(0) invert(1);
+    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */

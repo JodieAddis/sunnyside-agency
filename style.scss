@@ -15,6 +15,7 @@ $graphicTxt: hsl(167, 40%, 24%) ;
 $back:hsl(0, 0%, 100%);
 $bluegray:hsl(210, 4%, 67%);
 
+
 @mixin title{
     font-family: Fraunces;
     font-weight: 900;
@@ -31,6 +32,19 @@ $bluegray:hsl(210, 4%, 67%);
     @include title;
     text-decoration: none;
     font-family: Fraunces;
+}
+@mixin desk_txt{
+    font-family: Barlow;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5 ;
+}
+@mixin desk_title{
+    font-family: Fraunces;
+    font-weight: 900;
+    text-align: left;
+    color: $colorTxt;
+
 }
 
 //Mobile First
@@ -274,6 +288,11 @@ body{
                         border-radius: 30px;
                         padding-top: 0.8rem;
                         padding-bottom: 0.8rem;
+                        &:hover{
+                            color:$back;
+                            background-color: hsl(198, 86%, 68%);
+                            color: $back;
+                        }
                     }
                 }
             }
@@ -291,32 +310,41 @@ body{
                 height: 100%;
             }
             .Services, .Collab{
-                max-width: 400px;
+                max-width: 600px;
                 //height: 13rem;
                 padding-top: 3rem;
                 padding-bottom: 3rem;
                 display: grid;
                 place-content: center;
                 h2{
-                    @include title;
-                    margin-bottom: 1rem;
-                    font-size: 24px;
+                    @include desk_title();
+                    margin-bottom: 2rem;
+                    margin-left: 4rem;
+                    font-size: 34px;
+                    width: 380px;
                 }
                 p{
-                    @include text(); 
+                    @include desk_txt(); 
                     color: $bluegray;
                     font-weight: 700;
                     font-size: 18px;
+                    margin-left: 4rem;
                 }
                 a{
                     @include links;
+                    font-size: 18px;
                     margin-top: 3rem;
+                    width: 150px;
+                    margin-left: 5.5rem;
                 }
             }
             //Placement des div dans les cellules
             .Services{
                 grid-column: 1;
                 grid-row: 1;
+                .service_link:hover{
+                    border-bottom: hsl(51, 100%, 49%, 0.5) solid 5px;
+                }
             }
             .egg_pic{
                 grid-column: 2;
@@ -329,6 +357,9 @@ body{
             .Collab{
                 grid-column: 2;
                 grid-row: 2;
+                .collab_link:hover{
+                    border-bottom: hsl(7, 99%, 70%, 0.5) solid 5px;
+                }
             }
             .Graphic_Design{
                 grid-column: 1;
@@ -367,7 +398,7 @@ body{
                 padding-top: 4rem;
             }
             img{
-                margin-left: 7rem;
+                margin-left: 12rem;
             }
             .talk{
                 padding-right: 5rem;
@@ -408,6 +439,29 @@ body{
             .fth_img{
                 grid-column: 4;
                 grid-row: 1;
+            }
+        }
+    }
+    footer{
+        background-color:#90D4C6 ;
+        height: 300px;
+        display: flex;
+        flex-direction: column;//Eléments mis dans une colonne
+        align-items: center;//Alignement des items au centre du footer
+        padding-top: 3rem;
+        .Logo_Foot{
+            margin-bottom: 4rem;
+            filter: invert(26%) sepia(9%) saturate(2406%) hue-rotate(116deg) brightness(50%) contrast(90%);//Colorisation du logo
+        }
+        .Nav_Footer{
+            a:hover{
+                color: $back;
+            }
+        }
+        .social_network{
+            img:hover{
+                filter: brightness(0) invert(1);//Mets une couleur blanche sur les logo
+                cursor: pointer;
             }
         }
     }
