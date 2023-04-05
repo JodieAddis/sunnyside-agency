@@ -39,27 +39,28 @@ body header .Princ_Title h1 {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
-body header .Princ_Title .arrow {
+body header .Princ_Title .down_arrow {
   justify-self: center;
 }
-body header .Princ_Title .arrow img {
+body header .Princ_Title .down_arrow img {
   margin-top: 2rem;
   align-self: center;
 }
 body .Info_Mobile {
   max-width: 375px;
-  display: grid;
   background-color: hsl(0, 0%, 100%);
   transform: translateY(-2rem);
 }
 body .Info_Mobile h2, body .Info_Mobile p {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 body .Info_Mobile .Services, body .Info_Mobile .Collab {
-  height: 15rem;
+  height: 13rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  display: grid;
+  place-content: center;
   max-width: 375px;
 }
 body .Info_Mobile .Services h2, body .Info_Mobile .Collab h2 {
@@ -68,6 +69,7 @@ body .Info_Mobile .Services h2, body .Info_Mobile .Collab h2 {
   text-align: center;
   color: hsl(198, 62%, 26%);
   margin-bottom: 1rem;
+  font-size: 22px;
 }
 body .Info_Mobile .Services p, body .Info_Mobile .Collab p {
   font-family: Barlow;
@@ -84,6 +86,7 @@ body .Info_Mobile .Services a, body .Info_Mobile .Collab a {
   color: hsl(198, 62%, 26%);
   text-decoration: none;
   font-family: Fraunces;
+  margin-top: 3rem;
 }
 body .Info_Mobile img {
   max-width: 375px;
@@ -92,7 +95,7 @@ body .Info_Mobile .Graphic_Design {
   height: 600px;
 }
 body .Info_Mobile .Graphic_Design h2, body .Info_Mobile .Graphic_Design p {
-  transform: translateY(-11rem);
+  transform: translateY(-13rem);
   font-family: Barlow;
   text-align: center;
   font-size: 14px;
@@ -113,7 +116,7 @@ body .Info_Mobile .Photography {
   height: 600px;
 }
 body .Info_Mobile .Photography h2, body .Info_Mobile .Photography p {
-  transform: translateY(-10rem);
+  transform: translateY(-12rem);
   font-family: Barlow;
   text-align: center;
   font-size: 14px;
@@ -133,9 +136,10 @@ body .Info_Mobile .Photography p {
 }
 body .Employe {
   display: grid;
-  grid-row: 1fr 1fr 1fr;
-  margin: 0 2rem 5rem 2rem;
+  grid-template-rows: 100px, repeat(3, 1fr);
   row-gap: 4rem;
+  margin: 0 2rem 5rem 2rem;
+  align-items: center;
 }
 body .Employe h3 {
   text-transform: uppercase;
@@ -144,14 +148,14 @@ body .Employe h3 {
   font-family: Fraunces;
   letter-spacing: 0.3rem;
   font-size: 14px;
-  margin: 4rem 0 4rem 0;
+  margin: 3rem 0 1rem 0;
   text-align: center;
 }
-body .Employe .director img {
+body .Employe img {
   border-radius: 100%;
-  width: 60px;
+  width: 80px;
   margin-bottom: 1rem;
-  align-self: center;
+  margin-left: 7rem;
 }
 body .Employe .talk {
   font-family: Barlow;
@@ -203,15 +207,37 @@ body .Mix_img .fth_img {
 }
 body footer {
   background-color: #90D4C6;
-  height: 200px;
+  height: 300px;
   display: flex;
-  justify-content: center;
-  padding-top: 5rem;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
 }
 body footer .Logo_Foot {
-  flex-direction: row;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  filter: invert(26%) sepia(9%) saturate(2406%) hue-rotate(116deg) brightness(50%) contrast(90%);
 }
-body footer .Nav_Footer {
-  flex-direction: row;
+body footer .Nav_Footer nav {
+  display: inline-flex;
+}
+body footer .Nav_Footer nav li {
+  list-style-type: none;
+}
+body footer .Nav_Footer nav li a {
+  font-family: Barlow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: hsl(167, 40%, 24%);
+  font-weight: 700;
+  padding: 0 2rem 0 2rem;
+}
+body footer .social_network {
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+}
+body footer .social_network img {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }/*# sourceMappingURL=style.css.map */

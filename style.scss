@@ -7,6 +7,7 @@
     font-family: Fraunces;
     src: url(./assets/font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
+//Création de variables et mixins
 $colorTxt:hsl(198, 62%, 26%);
 $colorFoot:hsl(168, 34%, 41%);
 $fontTxt: Barlow;
@@ -55,7 +56,6 @@ body{
             display: grid;
             place-content: center;//Permet de centrer les éléments dans le container
             margin: 6rem 1rem 2rem 1rem;
-
             h1{
                 @include title;
                 color: hsl(0, 0%, 100%);
@@ -64,7 +64,7 @@ body{
                 text-transform: uppercase;
                 letter-spacing: 0.5rem;
             }
-            .arrow{
+            .down_arrow{
                 justify-self: center;
                 img{
                     margin-top: 2rem;
@@ -76,20 +76,22 @@ body{
     }
     .Info_Mobile{
         max-width: 375px;
-        display: grid;
         background-color: $back;
         transform: translateY(-2rem);
         h2, p{
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
         .Services, .Collab{
-            height: 15rem;
+            height: 13rem;
             padding-top: 3rem;
             padding-bottom: 3rem;
+            display: grid;
+            place-content: center;
             h2{
                 @include title;
                 margin-bottom: 1rem;
+                font-size: 22px;
             }
             p{
                 @include text; 
@@ -99,7 +101,7 @@ body{
             max-width: 375px;
             a{
                 @include links;
-                
+                margin-top: 3rem;
             }
         }
         img{
@@ -108,7 +110,7 @@ body{
         .Graphic_Design{
             height: 600px;
             h2, p{
-                transform: translateY(-11rem);
+                transform: translateY(-13rem);
                 @include text();
                 color: $graphicTxt;
                 font-weight: 700;
@@ -120,11 +122,10 @@ body{
                 margin-bottom: 2rem;
             }
         }
-        
         .Photography{
             height: 600px;
             h2, p{
-                transform: translateY(-10rem);
+                transform: translateY(-12rem);
                 @include text();
                 font-weight: 700;
             }
@@ -140,9 +141,10 @@ body{
     }
     .Employe{
         display: grid;
-        grid-row: 1fr 1fr 1fr;
-        margin: 0 2rem 5rem 2rem;
+        grid-template-rows: 100px, repeat(3, 1fr);
         row-gap: 4rem;
+        margin: 0 2rem 5rem 2rem;
+        align-items: center;
         h3{
             text-transform: uppercase;
             color:$bluegray;
@@ -150,17 +152,15 @@ body{
             font-family:Fraunces ;
             letter-spacing: 0.3rem;
             font-size: 14px;
-            margin: 4rem 0 4rem 0;
+            margin: 3rem 0 1rem 0;
             text-align: center;
         }
-        .director{
             img{
                 border-radius: 100%;
-                width: 60px;
+                width: 80px;
                 margin-bottom: 1rem;
-                align-self: center;
+                margin-left: 7rem;
             }
-        }
         .talk{
             @include text();
             margin-bottom: 2rem;
@@ -175,9 +175,10 @@ body{
             color: $bluegray;
             font-size: 12px;
         }
+        
     }
     .Mix_img{
-        display: grid;
+        display: grid;//Grille 2x2
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         img{
@@ -203,18 +204,42 @@ body{
     }
     footer{
         background-color:#90D4C6 ;
-        height: 200px;
+        height: 300px;
         display: flex;
-        justify-content: center;
-        padding-top: 5rem;
+        flex-direction: column;//Eléments mis dans une colonne
+        align-items: center;//Alignement des items au centre du footer
+        padding-top: 3rem;
         .Logo_Foot{
-            flex-direction: row;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
+            filter: invert(26%) sepia(9%) saturate(2406%) hue-rotate(116deg) brightness(50%) contrast(90%);//Colorisation du logo
         }
         .Nav_Footer{
-            flex-direction: row;
+            nav{
+                display: inline-flex;//Alignement sur une même ligne
+                li{
+                    list-style-type: none;//Suppression des puces de la liste
+                    a{
+                        @include text();
+                        text-decoration: none;
+                        color: $graphicTxt;
+                        font-weight: 700 ;
+                        padding: 0 2rem 0 2rem;
+                    } 
+                }
+            }
         }
-
+        .social_network{
+            margin-top: 4rem;
+            padding-bottom: 3rem;
+            img{
+                padding-left: 1rem;//Espace entre les icones
+                padding-right: 1rem;
+            }
+        }
     }
 }
 
+//Version pc (1440px)
+@media screen and (min-width:1440px) {
+    
+}
